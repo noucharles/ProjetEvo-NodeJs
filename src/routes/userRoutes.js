@@ -8,27 +8,32 @@ module.exports= (router) => {
 /*
  * GET
  */
-router.get('/', userController.list);
+router.get('/user', userController.list);
 
 /*
  * GET
  */
-router.get('/:id', userController.show);
+router.get('/user/:id', userController.show);
 
 /*
  * POST
  */
-router.post('/create', userController.create);
+router.post('/user', userController.create);
 
 /*
  * PUT
  */
-router.put('/:id', userController.update);
+router.put('/user/:id', userController.update);
 
 /*
  * DELETE
  */
-router.delete('/:id', userController.remove);
+router.delete('/user/:id', userController.remove);
+
+/*
+ * POST_LOGIN
+ */
+router.post('/login', userController.login);
 
 }
 
